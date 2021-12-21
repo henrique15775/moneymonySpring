@@ -24,11 +24,8 @@ public class CotacaoService {
 
 	   @Transactional
 	   public Cotacao inserirOuAtualizar(Cotacao cotacao) {
-	       Cotacao usuarioInserido = this.cotacaoRepository.save(cotacao);
-	       if (this.cotacaoRepository.getCotacoes().contains(usuarioInserido) == true) {
-	           throw new RuntimeException("Cotacao já foi inserida");
-	       }
-	       return usuarioInserido;
+	       Cotacao cotacaoInserida = this.cotacaoRepository.save(cotacao);
+	       return cotacaoInserida;
 	   }
 
 	   public void apagar(Long id) {

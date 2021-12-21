@@ -25,17 +25,17 @@ public class CotacaoController {
 	   private CotacaoService cotacaoService;
 
 	   @GetMapping("/cotacoes")
-	   public List<Cotacao> getUsuarios() {
+	   public List<Cotacao> getCotacoes() {
 	       return this.cotacaoService.getCotacao();
 	   }
 
 	   @GetMapping("/cotacoes/{id}")
-	   public Cotacao getUsuarioPorId(@PathVariable("id") Long idCotacao) {
+	   public Cotacao getCotacaoPorId(@PathVariable("id") Long idCotacao) {
 	       return this.cotacaoService.getCotacaoPorId(idCotacao);
 	   }
 
 	   @PostMapping("/cotacoes")
-	   public Cotacao inserirUsuario(@RequestBody Cotacao cotacao){
+	   public Cotacao Inserir(@RequestBody Cotacao cotacao){
 	       return this.cotacaoService.inserirOuAtualizar(cotacao);
 	   }
 

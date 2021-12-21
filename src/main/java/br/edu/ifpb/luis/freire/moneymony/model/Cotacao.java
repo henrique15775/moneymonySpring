@@ -14,11 +14,11 @@ public class Cotacao {
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
    private Long id;
-   private String url_moeda;
+   private String urlMoeda;
    private String codein;
    private String code;
- 
-   private String create_date;
+   private float pctChange;
+   private String createDate;
    private float ask;
    private float bid;
 
@@ -29,7 +29,11 @@ public class Cotacao {
    }
 
    public String getUrlMoeda() {
-       return this.url_moeda;
+       return this.urlMoeda;
+   }
+   	
+   public void setUrlMoeda(String url_moeda) {
+	   this.urlMoeda = url_moeda;
    }
 
    public void setBid(float bid) {
@@ -57,11 +61,11 @@ public class Cotacao {
    }
    
    public String getCreateDate() {
-	   return this.create_date;
+	   return this.createDate;
    }
    
    public void setCreateDate(String create_date) {
-       this.create_date = create_date;
+       this.createDate = create_date;
    }
 
 
@@ -72,6 +76,14 @@ public String getCodein() {
 
 public void setCodein(String codein) {
 	this.codein = codein;
+}
+
+public float getPctChange() {
+	return pctChange;
+}
+
+public void setPctChange(float pctChange) {
+	this.pctChange = pctChange;
 }
 
 }
