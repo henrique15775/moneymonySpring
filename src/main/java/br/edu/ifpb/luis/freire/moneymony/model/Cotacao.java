@@ -85,5 +85,6 @@ public float getPctChange() {
 public void setPctChange(float pctChange) {
 	this.pctChange = pctChange;
 }
-
 }
+
+

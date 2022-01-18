@@ -40,7 +40,7 @@ public class CotacaoController {
 	   }
 
 	   @PutMapping("/cotacoes/{id}")
-	   public Cotacao atualizarCotacao(@PathVariable("id") @RequestBody Cotacao cotacao){
+	   public Cotacao atualizarCotacao(@RequestBody Cotacao cotacao){
 	       return this.cotacaoService.inserirOuAtualizar(cotacao);
 	   }
 
